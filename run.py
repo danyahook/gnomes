@@ -1,7 +1,7 @@
 from app import app
 from app import db
 
-import controllers.main
+import gnomes.view
 
 
 if __name__ == '__main__':

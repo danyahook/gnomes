@@ -1,5 +1,5 @@
 class Configuration(object):
-    DEBUG = True
+    DEBUG = False
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_DATABASE_URI = 'sqlite:////sqlite/account.db'
     APP_TOKEN = 'gnomes'

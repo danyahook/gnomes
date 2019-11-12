@@ -2,8 +2,8 @@ from app import app
 from app import db
 
 from functools import wraps
-from models.models import User, Wallet
-from controllers.btc import GonmesBTC
+from gnomes.models import User, Wallet
+from gnomes.btc import GonmesBTC
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from flask import jsonify
@@ -64,6 +64,11 @@ def user_verification(f):
         return f(current_user, *args, **kwargs)
 
     return decorated
+
+
+@app.route('/', methods=['GET'])
+def index():
+    return "<h1 style='color:blue'>Wallto's API!</h1>"
 
 
 @app.route('/register', methods=['POST'])
